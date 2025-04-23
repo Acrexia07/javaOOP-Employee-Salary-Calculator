@@ -17,7 +17,7 @@ public class Main {
         double projectRate;
         double projectsCompleted;
 
-        // Process: Loop until the number of employees inputted is not equal or less than 0.
+        // Process: Loop until the number of employees inputted is an integer data type and not equal or less than 0.
         numOfEmployee = validateIntegerInput(scn);
 
         // Process: Initialize an array based on the numOfEmployee index

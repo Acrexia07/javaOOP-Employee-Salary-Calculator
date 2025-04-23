@@ -38,17 +38,15 @@ public class Main {
 
             scn.nextLine();
 
+            // Process: User input (String)
             System.out.print("Enter your name: ");
             name = scn.nextLine();
-
-
-
             System.out.print("Enter your ID: ");
             id = scn.nextInt();
 
+            // Process: Conditioned case on an Employment type.
             switch(employmentType){
                 case "ft" -> {
-
                     // Process: User input and validate user input (Double data type)
                     monthlySalary = validateDoubleInput(scn, "Monthly Salary: ", variableInput);
 
@@ -56,7 +54,6 @@ public class Main {
                     employees[i] = new Employee_FullTime(name, id, monthlySalary);
                 }
                 case "p" -> {
-
                     // Process: User input and validate user input (Double data type)
                     hourlyRate = validateDoubleInput(scn, "Hourly Rate: ", variableInput);
 
@@ -66,9 +63,7 @@ public class Main {
                     // Process: Added to array as new index
                     employees[i] = new Employee_PartTime(name, id, hourlyRate, hoursWorked);
                 }
-
                 case "fl" -> {
-
                     // Process: User input and validate user input (Double data type)
                     projectRate = validateDoubleInput(scn, "Project Rate: ", variableInput);
 
@@ -96,9 +91,10 @@ public class Main {
     //Method: Validation Process on Integer data type user input
     static int validateIntegerInput (Scanner scn){
 
+        // Initialization: Variable Declaration
         int variableInput;
 
-        // Process: User input and validate user input (Integer data type)
+        // Process: User input and validate user input (Integer data type) and variableInput <= 0
         while(true){
             System.out.print("Enter number of employees: ");
             if(!scn.hasNextInt()){
